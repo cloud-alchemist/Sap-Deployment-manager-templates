@@ -4,4 +4,4 @@ This template is sub-divided as network, firewall, vm and compute engine templat
 Resources:
 	Network template - Creates a network
 	Firewall template - Opens firewall ports specified to the network
-	Vm template and Compute engine template -  Creatws the cluster instances
+	Vm template and Compute engine template -  Creates the cluster instances
