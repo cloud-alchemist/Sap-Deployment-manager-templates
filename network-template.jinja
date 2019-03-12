@@ -5,19 +5,19 @@ resources:
     IPv4Range: 10.0.0.0/16
     autoCreateSubnetworks: false
 - type: compute.v1.subnetwork 
-  name: {{ env["name"] } - zoneA} 
+  name: subnetzoneA 
   properties: 
    network: $(ref.{{ properties["network"] }}.selfLink) 
    region: us-central1 
    ipCidrRange: 10.0.0.0/24
 - type: compute.v1.subnetwork 
-  name: {{ env["name"] } - zoneB}
+  name: subnetzoneB
   properties: 
    network: $(ref.{{ properties["network"] }}.selfLink)
    region: us-central1 
    ipCidrRange: 10.0.1.0/24
 - type: compute.v1.subnetwork 
-  name: {{ env["name"] } - zoneC}
+  name: subnetzoneC
   properties: 
    network: $(ref.{{ properties["network"] }}.selfLink)
    region: us-central1
