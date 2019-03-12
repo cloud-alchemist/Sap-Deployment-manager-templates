@@ -10,7 +10,7 @@ resources:
       boot: true
       autoDelete: true
       initializeParams:
-        sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/sles-15-sap
+        sourceImage: https://www.googleapis.com/compute/v1/projects/suse-cloud/global/images/sles-15-v20190221
     networkInterfaces:
     - network: $(ref.{{ properties["network"] }}.selfLink)
       accessConfigs:
