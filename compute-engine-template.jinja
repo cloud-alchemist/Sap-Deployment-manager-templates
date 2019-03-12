@@ -10,7 +10,7 @@ resources:
 - name: cluster2-vm
   type: vm-template.jinja
   properties:
-    machineType: g1-small
+    machineType: n1-highmem-32
     zone: us-central1-f
     network: {{ NETWORK_NAME }}
 - name: {{ NETWORK_NAME }}

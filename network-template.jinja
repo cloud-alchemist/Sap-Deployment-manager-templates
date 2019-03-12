@@ -3,3 +3,22 @@ resources:
   type: compute.v1.network
   properties:
     IPv4Range: 10.0.0.0/16
+    autoCreateSubnetworks: false
+- type: compute.v1.subnetwork 
+  name: {{ env["name"] } - zoneA} 
+  properties: 
+   network: $(ref.{{ properties["network"] }}.selfLink) 
+   region: us-central1 
+   ipCidrRange: 10.0.0.0/24
+- type: compute.v1.subnetwork 
+  name: {{ env["name"] } - zoneB}
+  properties: 
+   network: $(ref.{{ properties["network"] }}.selfLink)
+   region: us-central1 
+   ipCidrRange: 10.0.1.0/24
+- type: compute.v1.subnetwork 
+  name: {{ env["name"] } - zoneC}
+  properties: 
+   network: $(ref.{{ properties["network"] }}.selfLink)
+   region: us-central1
+   ipCidrRange: 10.0.2.0/24
